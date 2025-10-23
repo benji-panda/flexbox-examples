@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Flex-Shrink Example</title>
+    <style>
+        .container {
+            display: flex;
+            width: 300px; /* Fixed width to force shrinking */
+            height: 100px;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+            margin: 20px auto;
+        }
+
+        .item {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* (1/4) * (300px excess) = 75px shrink */
+        .item:nth-child(1) { 
+            flex: 0 1 200px; /* grow: 1, shrink: 1, basis: 0 */
+            background-color: #2196F3; 
+        }
+        /* (2/4) * (300px excess) = 150px shrink */
+        /* It won't shrink past it's minimum intrinsic content width, so the width after shrinking is still 54px */
+        .item:nth-child(2) { 
+            flex: 0 2 200px; /* grow: 1, shrink: 1, basis: 0 */
+            background-color: #FF9800; 
+        }
+        /* (1/4) * (300px excess) = 75px shrink */
+        .item:nth-child(3) { 
+            flex: 0 1 200px; /* grow: 1, shrink: 1, basis: 0 */
+            background-color: #9C27B0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+    </div>
+</body>
+</html>
