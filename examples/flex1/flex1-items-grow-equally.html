@@ -20,29 +20,26 @@
             align-items: center;
             justify-content: center;
         }
-        /* (1/4) * (300px excess) = 75px shrink */
         .item:nth-child(1) { 
-            flex: 0 1 200px; /* grow: 1, shrink: 1, basis: 200px */
+            flex: 1; /* grow: 1, shrink: 1, basis: 0 */
             background-color: #2196F3; 
         }
-        /* (2/4) * (300px excess) = 150px shrink */
-        /* It won't shrink past it's minimum intrinsic content width, so the width after shrinking is still 54px */
         .item:nth-child(2) { 
-            flex: 0 2 200px; /* grow: 1, shrink: 1, basis: 200px */
+            flex: 1; /* grow: 1, shrink: 1, basis: 0 */
             background-color: #FF9800; 
         }
-        /* (1/4) * (300px excess) = 75px shrink */
         .item:nth-child(3) { 
-            flex: 0 1 200px; /* grow: 1, shrink: 1, basis: 200px */
+            flex: 1; /* grow: 1, shrink: 1, basis: 0 */
+            width: 200px;
             background-color: #9C27B0; 
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
-        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
-        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
+        <div class="item">Lorem</div>
+        <div class="item">Lorem ipsum </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisinText. LLorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</div>
     </div>
 </body>
 </html>
